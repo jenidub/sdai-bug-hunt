@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>The Code Rockers</title>
-    <link rel="stylesheet" src="style.css">
+    <!-- HTML Bug #1 Line 6 - the attribute for the <link> tag is href, not src -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>The Code Rockers</h1>
     </header>
     <main>
-        <img src="./band.jpg">
+        <!-- HTML Bug #2 Line 14 - the path is incorrect b/c it's in assets folder/no alt text -->
+        <img src="./assets/band.jpg" alt="the band playing a concert with fans">
         <p id="description">The Code Rockers are a group of developers who love to rock and code.</p>
         <h2>Band Members</h2>
         <ul>
@@ -21,6 +23,7 @@
         <button id="funFactButton">Show Fun Fact</button>
         <p id="funFact" style="display: none;">The Code Rockers wrote their first song in JavaScript!</p>
     </main>
-    <script href="script.js"></script>
+    <!-- HTML Bug #3 Line 24 - the attribute for the source is src, not href -->
+    <script src="script.js"></script>
 </body>
 </html>
